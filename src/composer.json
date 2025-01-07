@@ -1,0 +1,28 @@
+{
+    "name": "ips/phpinfo",
+    "description": "Getting a PHP and database information",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ips\\Phpinfo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dhanik Keraliya"
+        }
+    ],
+    "require": {
+        "php": ">=5.8",
+        "illuminate/support": ">=5.4"
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "ips\\Phpinfo\\PhpInfoServiceProvider"
+            ]
+        }
+    },
+    "version": "1.0.0"
+}
