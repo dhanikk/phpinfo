@@ -14,8 +14,8 @@
         }
     ],
     "require": {
-        "php": ">=5.8",
-        "illuminate/support": ">=5.4"
+        "php": "^8.0",
+        "illuminate/support": "^10.0|^11.0"
     },
     "extra": {
         "laravel":{
@@ -25,6 +25,12 @@
 
             ]
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Phpinfo\\PhpInfoServiceProvider\" --tag=config",
+            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Phpinfo\\QueryLoggerServiceProvider\" --tag=config"
+        ]
     },
     "version": "1.0.0"
 }
