@@ -1,11 +1,11 @@
 {
-    "name": "ips/phpinfo",
-    "description": "Getting a PHP and database information",
+    "name": "Itpathsolutions/Phpinfo",
+    "description": "PHP & Database information",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "ips\\Phpinfo\\": "src/"
+            "Itpathsolutions\\Phpinfo\\": "src/"
         }
     },
     "authors": [
@@ -20,7 +20,9 @@
     "extra": {
         "laravel":{
             "providers":[
-                "ips\\Phpinfo\\PhpInfoServiceProvider"
+                "Itpathsolutions\\Phpinfo\\PhpInfoServiceProvider",
+                "Itpathsolutions\\Phpinfo\\QueryLoggerServiceProvider"
+
             ]
         }
     },
