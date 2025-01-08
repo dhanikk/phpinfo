@@ -1,6 +1,7 @@
 # phpinfo
 
 #installation
+
 **composer require itpathsolutions/phpinfo**
 
 Write this command to publish the vendor
