@@ -12,4 +12,4 @@ Write this command to publish the vendor
 
 localhost:8000/dashboard/php-info (for php information)
 
-localhost:8000/dashboard/database-info (for database information and query logger) /n
+localhost:8000/dashboard/database-info (for database information and query logger)
