@@ -1,22 +1,15 @@
-# Chatbot Package for Laravel
+# phpinfo
 
-A powerful and customizable chatbot package for Laravel applications.
+#installation
 
-## Table of Contents
+**composer require itpathsolutions/phpinfo**
 
-- [Installation](#installation)
-- [Usage](#usage)
+Write this command to publish the vendor
 
-## Installation
+**php artisan vendor:publish**
 
-To install the Chatbot package, use Composer:
+**Routes:**
 
-```bash
-composer require itpathsolutions/chatbot
+localhost:8000/dashboard/php-info (for php information)
 
-## Usage
-
-To install the Chatbot package, use Composer:
-
-To use the chatbot:
-switch to the following route : http://localhost:8000/contact
+localhost:8000/dashboard/database-info (for database information and query logger)
