@@ -10,6 +10,4 @@ Write this command to publish the vendor
 
 **Routes:**
 
-localhost:8000/dashboard/php-info (for php information)
-
-localhost:8000/dashboard/database-info (for database information and query logger)
+localhost:8000/php-info (for php information)
