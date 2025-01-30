@@ -56,7 +56,12 @@
                         <div class="card-title">
                             <div>Available Extensions</div>
                         </div>
-                        <div>
+                        <div class="d-flex">
+                            <select class="form-select form-select-sm" name="search_loaded" id="search_loaded">
+                                <option value="all">All</option>
+                                <option value="false">Unloaded</option>
+                                <option value="true">Loaded</option>
+                            </select>
                             <input type="text" name="search_extension" id="search_extension" class="form-control form-control-sm" placeholder="Search Extension" />
                         </div>
                     </div>
@@ -71,9 +76,9 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($phpinfo['all_available_extensions'] as $infokey => $extension)
-                                        <tr class="available_extension" data-extension="{{ $extension }}">
+                                        <tr class="available_extension" data-extension="{{ $extension }}" data-loaded="{{is_string($extension) && extension_loaded($extension) ? 'true' : 'false'}}">
                                             <td>
-                                                {{ $extension }} <i class="bi bi-info-circle-fill fs-6"  tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="{{\Config::get('app.modules.'.$extension)}}"></i>
+                                                {{ $extension }} <i class="bi bi-info-circle-fill" style="font-size: smaller;" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="{{\Config::get('app.modules.'.$extension)}}"></i>
                                             </td>
                                             <td>
                                                 @if (is_string($extension) && extension_loaded($extension))
@@ -166,7 +171,12 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="card-title">Available Modules</div>
-                    <div>
+                    <div class="d-flex">
+                        <select class="form-select form-select-sm" name="search_loaded_modules" id="search_loaded_modules">
+                            <option value="all">All</option>
+                            <option value="false">Unloaded</option>
+                            <option value="true">Loaded</option>
+                        </select>
                         <input type="text" name="search_modules" id="search_modules" class="form-control form-control-sm" placeholder="Search Module" />
                     </div>
                 </div>
@@ -181,9 +191,9 @@
                             </thead>
                             <tbody>
                                 @foreach (explode(", ",$phpinfo['php_modules']) as $key => $module)
-                                    <tr class="php_modules" data-module="{{isset($module) ? $module : ''}}">
+                                    <tr class="php_modules" data-module="{{isset($module) ? $module : ''}}" data-loaded="{{is_string($module) ? 'true' : 'false'}}">
                                         <td>
-                                            {{ $module }} <i class="bi bi-info-circle-fill fs-6"  tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="{{\Config::get('app.modules.'.$module)}}"></i>
+                                            {{ $module }} <i class="bi bi-info-circle-fill"  style="font-size: smaller;"  data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="{{\Config::get('app.modules.'.$module)}}"></i>
                                         </td>
                                         <td>
                                             @if (is_string($module))
@@ -285,6 +295,22 @@
 @section('phpinfo::script')
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('search_loaded').addEventListener("change", function(e) {
+                let value = this.value;
+                if(value == "all"){
+                    document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
+                        extensionElement.classList.remove("d-none");
+                    });
+                } else {
+                    document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
+                        if (extensionElement.dataset.loaded == value) {
+                            extensionElement.classList.remove("d-none");
+                        } else {
+                            extensionElement.classList.add("d-none");
+                        }
+                    });
+                }
+            });
             document.getElementById('search_extension').addEventListener("keyup", function(e) {
                 let value = this.value;
                 if(value == ""){
@@ -329,6 +355,23 @@
                 } else {
                     document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
                         if (extensionElement.dataset.module.toLowerCase().includes(value.toLowerCase())) {
+                            extensionElement.classList.remove("d-none");
+                        } else {
+                            extensionElement.classList.add("d-none");
+                        }
+                    });
+                }
+            });
+
+            document.getElementById('search_loaded_modules').addEventListener("change", function(e) {
+                let value = this.value;
+                if(value == "all"){
+                    document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
+                        extensionElement.classList.remove("d-none");
+                    });
+                } else {
+                    document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
+                        if (extensionElement.dataset.loaded == value) {
                             extensionElement.classList.remove("d-none");
                         } else {
                             extensionElement.classList.add("d-none");
