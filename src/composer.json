@@ -20,7 +20,8 @@
     "extra": {
         "laravel":{
             "providers":[
-                "ips\\Phpinfo\\PhpInfoServiceProvider"
+                "Itpathsolutions\\Phpinfo\\PhpInfoServiceProvider",
+                "Itpathsolutions\\Phpinfo\\QueryLoggerServiceProvider"
             ]
         }
     },
