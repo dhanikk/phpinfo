@@ -3,8 +3,8 @@
 @section('phpinfo::content')
 <div class="container mt-5">
     <h1 class="text-center">PHP Information</h1>
-    <div class="row d-flex mb-3">
-            <div class="col-md-6 flex-fill">
+    <div class="row d-flex my-3">
+            <div class="col-md-5 flex-fill">
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">PHP Core Information</div>
@@ -50,7 +50,7 @@
                 </div>
             </div>
     
-            <div class="col-md-3 flex-fill">
+            <div class="col-md-4 flex-fill">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="card-title">
@@ -98,7 +98,7 @@
     </div>
 
     <div class="row mb-3">
-        <div class="col-md-3 flex-fill">
+        <div class="col-md-4 flex-fill">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="card-title">PHP Configuration Directives</div>

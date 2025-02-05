@@ -1,5 +1,6 @@
 <?php
-    use ips\Phpinfo\Http\Controllers\PHPServerController;
     use Illuminate\Support\Facades\Route;
+    use Itpathsolutions\Phpinfo\Http\Controllers\PHPServerController;
+
     Route::get('/php-info', [PHPServerController::class, 'index']);
 ?>

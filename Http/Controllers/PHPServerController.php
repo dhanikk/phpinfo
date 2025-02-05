@@ -1,7 +1,8 @@
 <?php
 
-namespace ips\Phpinfo\Http\Controllers;
+namespace Itpathsolutions\Phpinfo\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 use App\Models\User;
