@@ -23,5 +23,5 @@ To install the **phpinfo** package, follow these steps:
     3. Write this command to publish the vendor: **php artisan vendor:publish**  
     4. Route: **localhost:8000/php-info**  
   
-# Usage  
+## **Usage**    
 Once installed, you can retrieve detailed PHP environment information by calling the **localhost:8000/php-info** route. The output will display core PHP details, available extensions, PHP configuration settings, and modules.  

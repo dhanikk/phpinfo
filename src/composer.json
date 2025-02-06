@@ -1,6 +1,6 @@
 {
-    "name": "ips/phpinfo",
-    "description": "Getting a PHP and database information",
+    "name": "itpathsolutions/phpinfo",
+    "description": "Getting a PHP Information",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -24,6 +24,12 @@
                 "Itpathsolutions\\Phpinfo\\QueryLoggerServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Phpinfo\\PhpInfoServiceProvider\" --tag=config",
+            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Phpinfo\\QueryLoggerServiceProvider\" --tag=config"
+        ]
     },
     "version": "1.0.0"
 }
