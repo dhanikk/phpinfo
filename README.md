@@ -1,6 +1,6 @@
 # phpinfo  
 
-The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information by calling this route **localhost:8000/php-info**. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization  
+The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization  
 
 ## **Features**  
 - **Detailed PHP Environment Information:**  
@@ -19,10 +19,9 @@ Gather information to optimize your PHP environment and improve application perf
 ## **Installation**  
 To install the **phpinfo** package, follow these steps:  
     1. Open your terminal.  
-    2. Run the following Composer command: **composer require itpathsolutions/phpinfo**  
+    2. Run the following Composer command:   
     <pre><code class="language-bash">composer require itpathsolutions/phpinfo</code></pre>  
-    3. Write this command to publish the vendor: **php artisan vendor:publish**  
-    4. Route: **localhost:8000/php-info**  
-  
-## **Usage**    
-Once installed, you can retrieve detailed PHP environment information by calling the **localhost:8000/php-info** route. The output will display core PHP details, available extensions, PHP configuration settings, and modules.  
+    3. Write this command to publish the vendor:   
+    <pre><code class="language-bash">php artisan vendor:publish</code></pre>    
+    4. Route:  
+    <pre><code class="language-bash">localhost:8000/php-info</code></pre>     

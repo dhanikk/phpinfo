@@ -31,5 +31,5 @@
             "@php artisan vendor:publish --provider=\"Itpathsolutions\\Phpinfo\\QueryLoggerServiceProvider\" --tag=config"
         ]
     },
-    "version": "1.0.12"
+    "version": "1.0.13"
 }
