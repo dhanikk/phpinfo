@@ -1,7 +1,20 @@
 @extends('phpinfo::layouts.app')
 
 @section('phpinfo::content')
-<div class="container mt-5">
+@if (isset($errors) && $errors->any())
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <div class="alert alert-danger text-center shadow-lg p-4 rounded" style="max-width: 600px;">
+            <h4 class="fw-bold"><i class="bi bi-exclamation-triangle-fill"></i> Error</h4>
+            <ul class="list-unstyled mt-3">
+                @foreach ($errors->all() as $error)
+                    <li class="text-danger" style="font-size: 25px">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+@endif
+@if(isset($phpinfo))
+<div class="container mt-5 main-php-container">
     <h1 class="text-center">PHP Information</h1>
     <div class="row d-flex my-3">
             <div class="col-md-5 flex-fill">
@@ -291,96 +304,97 @@
         </table>
     </div> --}}
 </div>
+@endif
 @endsection
 @section('phpinfo::script')
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById('search_loaded').addEventListener("change", function(e) {
-                let value = this.value;
-                if(value == "all"){
-                    document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
-                        extensionElement.classList.remove("d-none");
-                    });
-                } else {
-                    document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
-                        if (extensionElement.dataset.loaded == value) {
+            if (document.querySelector('.main-php-container')) {
+                document.getElementById('search_loaded').addEventListener("change", function(e) {
+                    let value = this.value;
+                    if(value == "all"){
+                        document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
                             extensionElement.classList.remove("d-none");
-                        } else {
-                            extensionElement.classList.add("d-none");
-                        }
-                    });
-                }
-            });
-            document.getElementById('search_extension').addEventListener("keyup", function(e) {
-                let value = this.value;
-                if(value == ""){
-                    document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
-                        extensionElement.classList.remove("d-none");
-                    });
-                } else {
-                    document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
-                        if (extensionElement.dataset.extension.toLowerCase().includes(value.toLowerCase())) {
+                        });
+                    } else {
+                        document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
+                            if (extensionElement.dataset.loaded == value) {
+                                extensionElement.classList.remove("d-none");
+                            } else {
+                                extensionElement.classList.add("d-none");
+                            }
+                        });
+                    }
+                });
+                document.getElementById('search_extension').addEventListener("keyup", function(e) {
+                    let value = this.value;
+                    if(value == ""){
+                        document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
                             extensionElement.classList.remove("d-none");
-                        } else {
-                            extensionElement.classList.add("d-none");
-                        }
-                    });
-                }
-            });
+                        });
+                    } else {
+                        document.querySelectorAll(".available_extension").forEach(function(extensionElement) {
+                            if (extensionElement.dataset.extension.toLowerCase().includes(value.toLowerCase())) {
+                                extensionElement.classList.remove("d-none");
+                            } else {
+                                extensionElement.classList.add("d-none");
+                            }
+                        });
+                    }
+                });
 
 
-            document.getElementById('search_php_directives').addEventListener("keyup", function(e) {
-                let value = this.value;
-                if(value == ""){
-                    document.querySelectorAll(".configuration_directive").forEach(function(extensionElement) {
-                        extensionElement.classList.remove("d-none");
-                    });
-                } else {
-                    document.querySelectorAll(".configuration_directive").forEach(function(extensionElement) {
-                        if (extensionElement.dataset.directive.toLowerCase().includes(value.toLowerCase()) || extensionElement.dataset.directivelabel.toLowerCase().includes(value.toLowerCase())) {
+                document.getElementById('search_php_directives').addEventListener("keyup", function(e) {
+                    let value = this.value;
+                    if(value == ""){
+                        document.querySelectorAll(".configuration_directive").forEach(function(extensionElement) {
                             extensionElement.classList.remove("d-none");
-                        } else {
-                            extensionElement.classList.add("d-none");
-                        }
-                    });
-                }
-            });
+                        });
+                    } else {
+                        document.querySelectorAll(".configuration_directive").forEach(function(extensionElement) {
+                            if (extensionElement.dataset.directive.toLowerCase().includes(value.toLowerCase()) || extensionElement.dataset.directivelabel.toLowerCase().includes(value.toLowerCase())) {
+                                extensionElement.classList.remove("d-none");
+                            } else {
+                                extensionElement.classList.add("d-none");
+                            }
+                        });
+                    }
+                });
 
-            document.getElementById('search_modules').addEventListener("keyup", function(e) {
-                let value = this.value;
-                if(value == ""){
-                    document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
-                        extensionElement.classList.remove("d-none");
-                    });
-                } else {
-                    document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
-                        if (extensionElement.dataset.module.toLowerCase().includes(value.toLowerCase())) {
+                document.getElementById('search_modules').addEventListener("keyup", function(e) {
+                    let value = this.value;
+                    if(value == ""){
+                        document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
                             extensionElement.classList.remove("d-none");
-                        } else {
-                            extensionElement.classList.add("d-none");
-                        }
-                    });
-                }
-            });
+                        });
+                    } else {
+                        document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
+                            if (extensionElement.dataset.module.toLowerCase().includes(value.toLowerCase())) {
+                                extensionElement.classList.remove("d-none");
+                            } else {
+                                extensionElement.classList.add("d-none");
+                            }
+                        });
+                    }
+                });
 
-            document.getElementById('search_loaded_modules').addEventListener("change", function(e) {
-                let value = this.value;
-                if(value == "all"){
-                    document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
-                        extensionElement.classList.remove("d-none");
-                    });
-                } else {
-                    document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
-                        if (extensionElement.dataset.loaded == value) {
+                document.getElementById('search_loaded_modules').addEventListener("change", function(e) {
+                    let value = this.value;
+                    if(value == "all"){
+                        document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
                             extensionElement.classList.remove("d-none");
-                        } else {
-                            extensionElement.classList.add("d-none");
-                        }
-                    });
-                }
-            });
-
-            
+                        });
+                    } else {
+                        document.querySelectorAll(".php_modules").forEach(function(extensionElement) {
+                            if (extensionElement.dataset.loaded == value) {
+                                extensionElement.classList.remove("d-none");
+                            } else {
+                                extensionElement.classList.add("d-none");
+                            }
+                        });
+                    }
+                });
+            }
         });
     </script>
 @endsection
