@@ -17,11 +17,13 @@ Gather information to optimize your PHP environment and improve application perf
 - **Illuminate Support:** ^9.0 | ^10.0 | ^11.0  
   
 ## **Installation**  
-To install the **phpinfo** package, follow these steps:  
-    1. Open your terminal.  
-    2. Run the following Composer command:   
-    <pre><code class="language-bash">composer require itpathsolutions/phpinfo</code></pre>  
-    3. Write this command to publish the vendor:   
-    <pre><code class="language-bash">php artisan vendor:publish</code></pre>    
-    4. Route:  
-    <pre><code class="language-bash">localhost:8000/php-info</code></pre>     
+To install the **phpinfo** package, follow these steps:   
+    1. Open the terminal and run the following command:  
+    <pre><code class="language-bash">composer require tpathsolutions/phpinfo</code></pre>   
+    2. Run the following command to publish the vendor files:  
+    <pre><code class="language-bash">php artisan vendor:publish</code></pre>  
+    3. To check the plugin, open the following URL in your browser:  
+    <pre><code class="language-bash">localhost:8000/php-info</code></pre>  
+
+## **You may also find our other package useful:**  
+[Mysql Info Package 🚀](https://packagist.org/packages/itpathsolutions/mysqlinfo)   
