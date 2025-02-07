@@ -20,6 +20,7 @@ Gather information to optimize your PHP environment and improve application perf
 To install the **phpinfo** package, follow these steps:  
     1. Open your terminal.  
     2. Run the following Composer command: **composer require itpathsolutions/phpinfo**  
+    <pre><code class="language-bash">composer require itpathsolutions/phpinfo</code></pre>  
     3. Write this command to publish the vendor: **php artisan vendor:publish**  
     4. Route: **localhost:8000/php-info**  
   
