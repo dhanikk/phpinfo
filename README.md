@@ -25,5 +25,5 @@ To install the **phpinfo** package, follow these steps:
     3. To check the plugin, open the following URL in your browser:  
     <pre><code class="language-bash">localhost:8000/php-info</code></pre>  
 
-## **You may also find our other package useful:**  
+## **You may also find our other useful package:**  
 [Mysql Info Package 🚀](https://packagist.org/packages/itpathsolutions/mysqlinfo)   
