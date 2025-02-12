@@ -1,11 +1,11 @@
 # 🔍 PHP Information
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/dhanikk/mysqlinfo/main/assets/php-preview.png" alt="phpinfo" width="100%" height="100%">
+  <img src="https://raw.githubusercontent.com/dhanikk/phpinfo/main/assets/php-preview.png" alt="phpinfo" width="100%" height="100%">
 </p>  
 
 The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization.  
- 
+
 <p>🏷️
 <a href="https://packagist.org/search/?tags=php">#PHP</a>&nbsp; 
 <a href="https://packagist.org/search/?tags=phpinfo">#PHPInfo</a>&nbsp;
