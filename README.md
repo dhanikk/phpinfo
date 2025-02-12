@@ -4,7 +4,21 @@
   <img src="https://raw.githubusercontent.com/dhanikk/mysqlinfo/main/assets/php-preview.png" alt="phpinfo" width="100%" height="100%">
 </p>  
 
-The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization. 
+The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization.  
+ 
+<p>🏷️
+<a href="https://packagist.org/search/?tags=php">#PHP</a>&nbsp; 
+<a href="https://packagist.org/search/?tags=phpinfo">#PHPInfo</a>&nbsp;
+<a href="https://packagist.org/search/?tags=laravel">#Laravel</a>&nbsp;
+<a href="https://packagist.org/search/?tags=debugging">#Debugging</a>&nbsp;
+<a href="https://packagist.org/search/?tags=server-info">#ServerInfo</a>&nbsp;
+<a href="https://packagist.org/search/?tags=php-configuration">#PHPConfiguration</a>&nbsp;
+<a href="https://packagist.org/search/?tags=extensions">#Extensions</a>&nbsp;
+<a href="https://packagist.org/search/?tags=modules">#Modules</a>&nbsp;
+<a href="https://packagist.org/search/?tags=performance">#Performance</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=developer-tool">#DeveloperTool</a>&nbsp; 
+</p>  
+
 
 # **Documentation**  
 - [Features](#features)  
@@ -41,20 +55,8 @@ Run the following command to publish the vendor files:
 
 ## **Accessing the Plugin**  
 Once installed, open the following URL in your browser to check the plugin:  
-<pre><code class="language-bash">localhost:8000/php-info</code></pre>  
+<pre><code class="language-bash">localhost:8000/php-info</code></pre>   
 
-<p>🏷️
-<a href="https://packagist.org/search/?tags=php">#PHP</a>&nbsp; 
-<a href="https://packagist.org/search/?tags=phpinfo">#PHPInfo</a>&nbsp;
-<a href="https://packagist.org/search/?tags=laravel">#Laravel</a>&nbsp;
-<a href="https://packagist.org/search/?tags=debugging">#Debugging</a>&nbsp;
-<a href="https://packagist.org/search/?tags=server-info">#ServerInfo</a>&nbsp;
-<a href="https://packagist.org/search/?tags=php-configuration">#PHPConfiguration</a>&nbsp;
-<a href="https://packagist.org/search/?tags=extensions">#Extensions</a>&nbsp;
-<a href="https://packagist.org/search/?tags=modules">#Modules</a>&nbsp;
-<a href="https://packagist.org/search/?tags=performance">#Performance</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=developer-tool">#DeveloperTool</a>&nbsp; 
-</p>  
 
 ## **Contributing**  
 We welcome contributions from the community! Feel free to **Fork** the repository and contribute to this module. You can also create a pull request, and we will merge your changes into the main branch. See [CONTRIBUTING](https://github.com/dhanikk/phpinfo/blob/main/CONTRIBUTING.md) for details.  
