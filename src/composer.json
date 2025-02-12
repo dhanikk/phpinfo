@@ -8,6 +8,30 @@
             "Itpathsolutions\\Phpinfo\\": "src/"
         }
     },
+    "keywords": [
+        "php",
+        "phpinfo",
+        "itpathsolutions",
+        "server-info",
+        "system-info",
+        "configuration",
+        "version",
+        "environment",
+        "server-monitoring",
+        "performance-monitoring",
+        "debugging",
+        "php-debug",
+        "php-settings",
+        "php-tools",
+        "development-tools",
+        "php-extensions",
+        "php-server",
+        "laravel-phpinfo",
+        "diagnostics",
+        "modules",
+        "performance", 
+        "developer-tool"
+    ],
     "authors": [
         {
             "name": "Dhanik Keraliya"
@@ -31,5 +55,5 @@
             "@php artisan vendor:publish --provider=\"Itpathsolutions\\Phpinfo\\QueryLoggerServiceProvider\" --tag=config"
         ]
     },
-    "version": "1.0.14"
+    "version": "1.0.15"
 }
