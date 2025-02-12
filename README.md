@@ -7,7 +7,7 @@
 The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization. 
 
 # **Documentation**  
-- [Featured](#features)  
+- [Features](#features)  
 - [Supported Versions](#supported-versions)  
 - [Installation](#installation)  
   - [Commands](#commands)  
