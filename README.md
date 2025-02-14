@@ -7,16 +7,16 @@
 The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization.  
 
 <p>🏷️
-<a href="https://packagist.org/search/?tags=php" target="_blank" rel="noopener noreferrer">#PHP</a>&nbsp; 
-<a href="https://packagist.org/search/?tags=phpinfo" target="_blank" rel="noopener noreferrer">#PHPInfo</a>&nbsp;
-<a href="https://packagist.org/search/?tags=laravel" target="_blank" rel="noopener noreferrer">#Laravel</a>&nbsp;
-<a href="https://packagist.org/search/?tags=debugging" target="_blank" rel="noopener noreferrer">#Debugging</a>&nbsp;
-<a href="https://packagist.org/search/?tags=server-info" target="_blank" rel="noopener noreferrer">#ServerInfo</a>&nbsp;
-<a href="https://packagist.org/search/?tags=php-configuration" target="_blank" rel="noopener noreferrer">#PHPConfiguration</a>&nbsp;
-<a href="https://packagist.org/search/?tags=extensions" target="_blank" rel="noopener noreferrer">#Extensions</a>&nbsp;
-<a href="https://packagist.org/search/?tags=modules" target="_blank" rel="noopener noreferrer">#Modules</a>&nbsp;
-<a href="https://packagist.org/search/?tags=performance" target="_blank" rel="noopener noreferrer">#Performance</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=developer-tool" target="_blank" rel="noopener noreferrer">#DeveloperTool</a>&nbsp; 
+<a href="https://packagist.org/search/?tags=php" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#PHP</a>&nbsp; 
+<a href="https://packagist.org/search/?tags=phpinfo" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#PHPInfo</a>&nbsp;
+<a href="https://packagist.org/search/?tags=laravel" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#Laravel</a>&nbsp;
+<a href="https://packagist.org/search/?tags=debugging" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#Debugging</a>&nbsp;
+<a href="https://packagist.org/search/?tags=server-info" target="_blank" class="javascript:void(0)" class="javascript:void(0)" rel="noopener noreferrer">#ServerInfo</a>&nbsp;
+<a href="https://packagist.org/search/?tags=php-configuration" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#PHPConfiguration</a>&nbsp;
+<a href="https://packagist.org/search/?tags=extensions" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#Extensions</a>&nbsp;
+<a href="https://packagist.org/search/?tags=modules" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#Modules</a>&nbsp;
+<a href="https://packagist.org/search/?tags=performance" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#Performance</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=developer-tool" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">#DeveloperTool</a>&nbsp; 
 </p>  
 
 
@@ -59,14 +59,14 @@ Once installed, open the following URL in your browser to check the plugin:
 
 
 ## **Contributing**  
-We welcome contributions from the community! Feel free to **Fork** the repository and contribute to this module. You can also create a pull request, and we will merge your changes into the main branch. See <a href="https://github.com/dhanikk/phpinfo/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">CONTRIBUTING</a> for details.  
+We welcome contributions from the community! Feel free to **Fork** the repository and contribute to this module. You can also create a pull request, and we will merge your changes into the main branch. See <a href="https://github.com/dhanikk/phpinfo/blob/main/CONTRIBUTING.md" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">CONTRIBUTING</a> for details.  
  
 
 ## **Security Vulnerabilities**  
-Please review our <a href="https://github.com/dhanikk/phpinfo/blob/main/security/policy" target="_blank" rel="noopener noreferrer">Security Policy</a> on how to report security vulnerabilities.  
+Please review our <a href="https://github.com/dhanikk/phpinfo/blob/main/security/policy" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">Security Policy</a> on how to report security vulnerabilities.  
 
 ## **License**  
-This package is open-source and available under the MIT License. See the <a href="https://github.com/dhanikk/phpinfo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a> file for details.  
+This package is open-source and available under the MIT License. See the <a href="https://github.com/dhanikk/phpinfo/blob/main/LICENSE" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">LICENSE</a> file for details.  
 
 ## **Testing**  
 To test this package, run the following test command:  
@@ -75,11 +75,11 @@ To test this package, run the following test command:
 
 
 ## **Get Support**  
-- Feel free to <a href="https://www.itpathsolutions.com/contact-us/" target="_blank" rel="noopener noreferrer">contact us</a> if you have any questions.  
-- If you find this project helpful, please give us a ⭐ <a href="https://github.com/dhanikk/phpinfo/stargazers" target="_blank" rel="noopener noreferrer">Star</a>.  
+- Feel free to <a href="https://www.itpathsolutions.com/contact-us/" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">contact us</a> if you have any questions.  
+- If you find this project helpful, please give us a ⭐ <a href="https://github.com/dhanikk/phpinfo/stargazers" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">Star</a>.  
 
 ## **You may also find our other useful package:**  
-[Mysql Info Package 🚀](https://packagist.org/packages/itpathsolutions/mysqlinfo){:target="_blank" rel="noopener noreferrer"}    
-[AUTH Info Package 🚀](https://packagist.org/packages/itpathsolutions/authinfo){:target="_blank" rel="noopener noreferrer"}   
+<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">Mysql Info Package 🚀</a>
+<a href="https://packagist.org/packages/itpathsolutions/authinfo" target="_blank" class="javascript:void(0)" rel="noopener noreferrer">AUTH Info Package 🚀</a>
 
    
