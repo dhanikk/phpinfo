@@ -3,13 +3,13 @@
 namespace Itpathsolutions\Phpinfo\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use DB;
-use App\Models\User;
+use Illuminate\View\View;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\DB;
 
 class PHPServerController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         try {
             $osName = php_uname('s'); // Operating system name (e.g., Windows, Linux)
@@ -17,12 +17,15 @@ class PHPServerController extends Controller
             $extensionDir = ini_get('extension_dir');
 
             // Get a list of all files in the extension directory
-            $allExtensions = scandir($extensionDir);
+            $allExtensions = !empty($extensionDir) && is_dir($extensionDir) ? scandir($extensionDir) : [];
 
             // Filter the files to include only `.so` or `.dll` files
-            $availableExtensions = array_filter($allExtensions, function ($file) {
-                return preg_match('/\.(so|dll)$/', $file);
-            });
+            $availableExtensions = is_array($allExtensions) ? array_filter($allExtensions, function ($file): bool { 
+                                        return preg_match('/\.(so|dll)$/', $file) === 1; 
+                                    }) : [];
+
+            $database_version = DB::selectOne('SELECT VERSION() as version');
+
             $phpinfo = [
                 // Basic PHP Information
                 'php_version' => phpversion(),
@@ -59,19 +62,19 @@ class PHPServerController extends Controller
 
                 // PHP Extensions & Libraries
                 'loaded_extensions' => get_loaded_extensions(),
-                'curl_version' => function_exists('curl_version') ? curl_version()['version'] : 'Not Installed',
+                'curl_version' => function_exists('curl_version') && is_array(curl_version()) ? curl_version()['version'] : 'Not Installed',
                 'openssl_version' => OPENSSL_VERSION_TEXT,
                 'gd_info' => function_exists('gd_info') ? gd_info() : 'Not Installed',
                 'mbstring_version' => extension_loaded('mbstring') ? mb_get_info() : 'Not Installed',
-                'ioncube_version' => extension_loaded('ionCube Loader') ? ioncube_loader_version() : 'Not Installed',
+                'ioncube_version' => extension_loaded('ionCube Loader') && function_exists('ioncube_loader_version') ? ioncube_loader_version() : 'Not Installed',
 
                 // Disk Information
-                'available_disk_space' => $this->formatBytes(disk_free_space("/")),
-                'total_disk_space' => $this->formatBytes(disk_total_space("/")),
+                'available_disk_space' => $this->formatBytes((int) (disk_free_space("/") ?: 0)),
+                'total_disk_space' => $this->formatBytes((int) (disk_total_space("/") ?: 0)),
 
                 // Database Information
                 'database_connection' => config('database.default'),
-                'database_version' => DB::selectOne('SELECT VERSION() as version')->version ?? 'N/A',
+                'database_version' => is_object($database_version) && property_exists($database_version, 'version') ? $database_version->version : 'N/A',
 
                 // Open Basedir Restriction
                 'open_basedir' => ini_get('open_basedir') ?: 'Not Set',
@@ -131,7 +134,8 @@ class PHPServerController extends Controller
         
     }
 
-    public function formatBytes($bytes, $precision = 2) {
+    public function formatBytes(int $bytes, int $precision = 2) : string
+    {
         $units = ['B', 'KB', 'MB', 'GB', 'TB'];
         $bytes = max($bytes, 0);
         $power = $bytes > 0 ? floor(log($bytes, 1024)) : 0;
@@ -141,21 +145,19 @@ class PHPServerController extends Controller
         return round($value, $precision) . ' ' . $units[$power];
     }
 
-    public function isErrorReportingEnabled() {
+    public function isErrorReportingEnabled(): bool
+    {
         $errorReporting = error_reporting();
         $displayErrors = ini_get('display_errors');
-    
+        $displayErrors = is_string($displayErrors) ? strtolower($displayErrors) : '0';
         // If error_reporting is not 0 and display_errors is "1" or "On"
-        return $errorReporting !== 0 && (strtolower($displayErrors) === '1' || strtolower($displayErrors) === 'on');
+        return $errorReporting !== 0 && ($displayErrors === '1' || $displayErrors === 'on');
     }
 
-    public function showprocesslist(){
+    public function showprocesslist(): JsonResponse
+    {
         // load processlist
         $processList = DB::select('SHOW PROCESSLIST');
-        return response()->json([
-            'success' => true,
-            'data' => $processList
-        ]);
+        return response()->json(['success' => true,'data' => $processList]);
     }
-
 }
