@@ -6,6 +6,9 @@
 
 The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization.  
 
+## **⚠️ Security Warning**
+This package exposes sensitive PHP environment details. Do not use it in production environments unless properly secured. It is recommended to restrict access to authorized users only.
+
 <p>🏷️
 <a href="https://packagist.org/search/?tags=php" target="_blank" href="javascript:void(0)">#PHP</a>&nbsp; 
 <a href="https://packagist.org/search/?tags=phpinfo" target="_blank" href="javascript:void(0)">#PHPInfo</a>&nbsp;
@@ -19,25 +22,32 @@ The **phpinfo** package provides detailed insights into your PHP environment wit
 <a href="https://packagist.org/search/?tags=developer-tool" target="_blank" href="javascript:void(0)">#DeveloperTool</a>&nbsp; 
 </p>  
 
-
-# **Documentation**  
-- [Features](#features)  
-- [Supported Versions](#supported-versions)  
-- [Installation](#installation)  
-  - [Commands](#commands)  
-    - [Composer Require](#composer-require)  
-    - [Vendor Publish](#vendor-publish)  
-- [Accessing the Plugin](#accessing-the-plugin) 
+## Documentation
+- [Features](#features)
+- [Supported Versions](#supported-versions)
+- [Installation](#installation)
+    - [Commands](#commands)
+        - [Vendor Publish](#vendor-publish)
+        - [Accessing the Plugin](#accessing-the-plugin)
+- [FAQs](#faqs)
+- [Contributing](#contributing)
+- [Security Vulnerabilities](#security-vulnerabilities)
+- [License](#license)
+- [Testing](#testing)
+- [Support](#get-support)
 
 ## **Features**  
-- **Detailed PHP Environment Information:**  
-Get comprehensive details about the PHP setup, such as the PHP version, extensions, configuration directives, and loaded modules.  
+- **Comprehensive PHP Info** – Displays PHP version, extensions, configuration, and modules.  
+- **Debugging & Troubleshooting** – Identify configuration issues quickly.  
+- **Performance Optimization** – Gather insights for tuning PHP performance.  
+- **PHP Directives Overview** – Shows key settings like memory limit and execution time.  
+- **Search Functionality** – Find specific PHP settings easily.  
+- **Extension & Module Check** – Lists enabled and disabled PHP extensions.  
+- **Customizable Display** – Hide unnecessary details based on requirements.  
+- **Lightweight & Fast** – Minimal impact on performance, maximum insights.  
+- **User-Friendly UI** – Clean, structured, and easy to navigate.  
+- **Laravel & Standalone Support** – Works in Laravel projects or as a standalone package.  
 
-- **Debugging & Troubleshooting:**  
-Quickly identify potential issues within the PHP configuration to help debug and resolve problems.  
-
-- **Performance Tuning:**  
-Gather information to optimize your PHP environment and improve application performance.  
 
 ## **Supported Versions**  
 - **PHP:** ^8.0  
@@ -58,6 +68,34 @@ Once installed, open the following URL in your browser to check the plugin:
 <pre><code class="language-bash">localhost:8000/php-info</code></pre>   
 
 
+## **FAQs**
+
+### 1️. What does this package do?  
+This package provides detailed insights into your PHP environment, including PHP version, configuration directives, extensions, and modules.  
+
+## 2. How do I install the package?  
+📦 Installing is simple! Run the following command in your terminal:  
+<pre><code class="language-bash">composer require itpathsolutions/phpinfo</code></pre>
+
+## 3. Which Laravel versions are supported?  
+This package supports **Laravel 9, 10, and 11** with **PHP 8+** compatibility.  
+
+## 4. How do I view php info?  
+You can access login logs via:  
+👉 `localhost:8000/php-info`  
+
+## 5. How do I update the package to the latest version?  
+Run the following command to update:
+<pre><code class="language-bash">composer update itpathsolutions/phpinfo</code></pre>  
+
+
+## 6. Can I contribute to this package?  
+🤝 Absolutely! Contributions are welcome. See the [CONTRIBUTING](https://github.com/vidhi-nirmal71/authinfo/blob/main/CONTRIBUTING.md) guidelines for details.  
+
+## 7. Where can I get support?  
+For any support or queries, contact us via [IT Path Solutions](https://www.itpathsolutions.com/contact-us/).  
+
+
 ## **Contributing**  
 We welcome contributions from the community! Feel free to **Fork** the repository and contribute to this module. You can also create a pull request, and we will merge your changes into the main branch. See <a href="https://github.com/dhanikk/phpinfo/blob/main/CONTRIBUTING.md" target="_blank" href="javascript:void(0)">CONTRIBUTING</a> for details.  
  
@@ -76,10 +114,10 @@ To test this package, run the following test command:
 
 ## **Get Support**  
 - Feel free to <a href="https://www.itpathsolutions.com/contact-us/" target="_blank" href="javascript:void(0)" rel="noopener noreferrer">contact us</a> if you have any questions.  
-- If you find this project helpful, please give us a ⭐ <a href="https://github.com/dhanikk/phpinfo/stargazers" target="_blank" href="javascript:void(0)" rel="noopener noreferrer">Star</a>.  
+- If you find this project helpful, please give us a ⭐ <a href="https://github.com/dhanikk/phpinfo/stargazers" target="_blank" href="javascript:void(0)" rel="noopener noreferrer">Star</a>.   
 
 ## **You may also find our other useful package:**  
-<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank" href="javascript:void(0)">Mysql Info Package 🚀</a>  
-<a href="https://packagist.org/packages/itpathsolutions/authinfo" target="_blank" href="javascript:void(0)">AUTH Info Package 🚀</a>  
-
-   
+<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package 🚀</a>  
+<a href="https://packagist.org/packages/itpathsolutions/authinfo" target="_blank">AUTH Info Package 🚀</a>
+<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package 🚀</a>
+<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package 🚀</a>  
