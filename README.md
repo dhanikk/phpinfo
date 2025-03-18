@@ -117,7 +117,8 @@ To test this package, run the following test command:
 - If you find this project helpful, please give us a ⭐ <a href="https://github.com/dhanikk/phpinfo/stargazers" target="_blank" href="javascript:void(0)" rel="noopener noreferrer">Star</a>.   
 
 ## **You may also find our other useful package:**  
-<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package 🚀</a>  
-<a href="https://packagist.org/packages/itpathsolutions/authinfo" target="_blank">AUTH Info Package 🚀</a>  
-<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package 🚀</a>  
-<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package 🚀</a>  
+<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package 🚀</a>    
+<a href="https://packagist.org/packages/itpathsolutions/authinfo" target="_blank">AUTH Info Package 🚀</a>    
+<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package 🚀</a>    
+<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package 🚀</a>    
+<a href="https://packagist.org/packages/itpathsolutions/redisinfo" target="_blank">Redis Info Package 🚀</a>  
