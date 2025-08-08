@@ -1,4 +1,4 @@
-# 🔍 PHP Information
+# PHP Information
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/dhanikk/phpinfo/main/assets/php-preview.png" alt="phpinfo" width="100%" height="100%">
@@ -6,10 +6,10 @@
 
 The **phpinfo** package provides detailed insights into your PHP environment with proper format, helping developers to check their php information. This includes core information, available extensions, PHP configuration directives, and modules. It is a powerful tool for efficient debugging, environment validation, and performance optimization.  
 
-## **⚠️ Security Warning**
+## **Security Warning**
 This package exposes sensitive PHP environment details. Do not use it in production environments unless properly secured. It is recommended to restrict access to authorized users only.
 
-<p>🏷️
+<p>
 <a href="https://packagist.org/search/?tags=php" target="_blank" href="javascript:void(0)">#PHP</a>&nbsp; 
 <a href="https://packagist.org/search/?tags=phpinfo" target="_blank" href="javascript:void(0)">#PHPInfo</a>&nbsp;
 <a href="https://packagist.org/search/?tags=laravel" target="_blank" href="javascript:void(0)">#Laravel</a>&nbsp;
@@ -74,7 +74,7 @@ Once installed, open the following URL in your browser to check the plugin:
 This package provides detailed insights into your PHP environment, including PHP version, configuration directives, extensions, and modules.  
 
 ## 2. How do I install the package?  
-📦 Installing is simple! Run the following command in your terminal:  
+Installing is simple! Run the following command in your terminal:  
 <pre><code class="language-bash">composer require itpathsolutions/phpinfo</code></pre>
 
 ## 3. Which Laravel versions are supported?  
@@ -82,7 +82,7 @@ This package supports **Laravel 9, 10, and 11** with **PHP 8+** compatibility.
 
 ## 4. How do I view php info?  
 You can access login logs via:  
-👉 `localhost:8000/php-info`  
+`localhost:8000/php-info`  
 
 ## 5. How do I update the package to the latest version?  
 Run the following command to update:
@@ -90,7 +90,7 @@ Run the following command to update:
 
 
 ## 6. Can I contribute to this package?  
-🤝 Absolutely! Contributions are welcome. See the [CONTRIBUTING](https://github.com/vidhi-nirmal71/authinfo/blob/main/CONTRIBUTING.md) guidelines for details.  
+Absolutely! Contributions are welcome. See the [CONTRIBUTING](https://github.com/vidhi-nirmal71/authinfo/blob/main/CONTRIBUTING.md) guidelines for details.  
 
 ## 7. Where can I get support?  
 For any support or queries, contact us via [IT Path Solutions](https://www.itpathsolutions.com/contact-us/).  
@@ -117,8 +117,8 @@ To test this package, run the following test command:
 - If you find this project helpful, please give us a ⭐ <a href="https://github.com/dhanikk/phpinfo/stargazers" target="_blank" href="javascript:void(0)" rel="noopener noreferrer">Star</a>.   
 
 ## **You may also find our other useful package:**  
-<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package 🚀</a>    
-<a href="https://packagist.org/packages/itpathsolutions/authinfo" target="_blank">AUTH Info Package 🚀</a>    
-<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package 🚀</a>    
-<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package 🚀</a>    
-<a href="https://packagist.org/packages/itpathsolutions/redisinfo" target="_blank">Redis Info Package 🚀</a>  
+<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package</a>    
+<a href="https://packagist.org/packages/itpathsolutions/authinfo" target="_blank">AUTH Info Package</a>    
+<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package</a>    
+<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package</a>    
+<a href="https://packagist.org/packages/itpathsolutions/redisinfo" target="_blank">Redis Info Package</a>  
